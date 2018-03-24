@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.justin.encoder.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="MD5 加密 :"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:hint="在此输入需要加密的信息 :D "
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/text"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="13dp"
+        android:text="盐值 :"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/salt"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignStart="@+id/textView"
+        android:hint="填写盐值"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/salt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:text="加密后的信息 :"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/out"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="12dp"
+        android:textSize="30sp" />
+
+    <RadioGroup
+        android:id="@+id/group1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/out"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/eightNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8位数" />
+
+        <RadioButton
+            android:id="@+id/tenNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10位数" />
+
+        <RadioButton
+            android:id="@+id/thirteenNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13位数" />
+
+        <RadioButton
+            android:id="@+id/superNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15位强化版" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/noChanged"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="32位原数" />
+
+        <RadioButton
+            android:id="@+id/eightSuper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8位加强" />
+
+        <RadioButton
+            android:id="@+id/tenSuper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10位加强" />
+
+        <RadioButton
+            android:id="@+id/thirteenSuper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13位加强" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="重置"
+        android:textSize="20sp" />
+
+</RelativeLayout>
